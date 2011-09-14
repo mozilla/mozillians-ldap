@@ -1,0 +1,1 @@
+OpenLDAP backend for Mozillians.
