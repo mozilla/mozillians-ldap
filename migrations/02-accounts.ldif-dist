@@ -1,0 +1,42 @@
+####################
+# LDAP Accounts
+####################
+#
+# NOTE:
+#	This file contains some special-purpose accounts
+#	They all have the password 'secret'
+#	All passwords must be changed before going into production
+#
+#	The accounts have names that indicate their intended function
+#	but those names are not used in the server config
+#	(apart from replicator in the replication consumers).
+#	The power to do the job is conferred by membership of groups,
+#	which are also defined in this file.
+
+dn: uid=replicator,ou=accounts,ou=system,dc=mozillians,dc=org
+objectClass: account
+objectClass: simpleSecurityObject
+uid: replicator
+description: LDAP Replication consumer
+userPassword: secret
+
+dn: uid=monitor,ou=accounts,ou=system,dc=mozillians,dc=org
+objectClass: account
+objectClass: simpleSecurityObject
+uid: monitor
+description: LDAP server monitoring account
+userPassword: secret
+
+dn: uid=LDAPAdmin,ou=accounts,ou=system,dc=mozillians,dc=org
+objectClass: account
+objectClass: simpleSecurityObject
+uid: LDAPAdmin
+description: LDAP data administrator
+userPassword: secret
+
+dn: uid=regAgent,ou=accounts,ou=system,dc=mozillians,dc=org
+objectClass: account
+objectClass: simpleSecurityObject
+uid: regAgent
+description: LDAP registration agent
+userPassword: secret
